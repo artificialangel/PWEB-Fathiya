@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Form Registrasi Mahasiswa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="main">
+    <h2>Form Registrasi</h2>
+    <form action="">
+
+      <label for="nama">Nama Mahasiswa:</label>
+      <div class="suggestions">
+        <input type="text" id="nama" name="nama" required>
+        <div id="suggestList" class="suggest-list" hidden></div>
+      </div>
+
+      <label for="nrp">NRP:</label>
+        <input type="text" id="nrp" name="nrp" 
+            minlength="10" maxlength="10" 
+            pattern="\d{10}" 
+            title="Format NRP harus sesuai" required />
+
+      
+
+      <label for="matkul">Mata Kuliah:</label>
+      <select id="matkul" name="matkul" required>
+        <option value=""></option>
+        <option value="PeWeb">Pemrogaman Web</option>
+        <option value="PBO">Pemrogaman Berbasis Objek</option>
+      </select>
+
+      <label for="dosen">Dosen:</label>
+      <select id="dosen" name="dosen" required>
+        <option value=""></option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
